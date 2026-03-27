@@ -20,14 +20,26 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "example/vite-react-app"
+  - package-ecosystem: "gradle"
+    directories:
+      - "/ai-agent-skills"
+      - "/birt"
+      - "/example"
+      - "/firstdatapaymentgateway"
+      - "/ldap"
+      - "/lucene"
+      - "/pricat"
+      - "/rest-api"
+      - "/solr"
     schedule:
       interval: "daily"
 
-  - package-ecosystem: "npm"
-    directory: "example/vite-react-app"
-    target-branch: "release24.09"
-    schedule:
-      interval: "daily"
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
 
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
