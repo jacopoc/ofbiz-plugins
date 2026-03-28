@@ -18,6 +18,8 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference
 
+# trigger
+
 version: 2
 updates:
   - package-ecosystem: "gradle"
